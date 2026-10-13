@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mappa del Feudo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Public+Sans:wght@400;500;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stile.css">
+<!-- Contatore visite (facoltativo): per attivarlo togli i commenti e metti il tuo codice GoatCounter.
+<script data-goatcounter="https://IL-TUO-CODICE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+-->
+</head>
+<body>
+<div class="app" id="app">
+  <div class="bar">
+    <div class="sub" id="subtitle">476 d.C. · La fine del mondo</div>
+    <div class="bar-r">
+      <button class="pill" id="btnLang" data-notr>العربية</button>
+      <button class="pill" id="btnBack" disabled>← Indietro</button>
+      <div class="score"><b id="score">0</b><small>Punti</small></div>
+      <button class="pill" id="btnBoard">Docente</button>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="left">
+      <div class="mapwrap" id="mapwrap">
+        <canvas id="map" aria-label="Mappa del tuo feudo"></canvas>
+        <div class="chapter-tag" id="chTag"></div>
+        <div class="turn-tag" id="turnTag"></div>
+      </div>
+      <div class="hud" id="hud"></div>
+      <div class="progress" id="progress"></div>
+    </div>
+    <div class="panel" id="panel"></div>
+  </div>
+</div>
+<div id="winner" hidden></div>
+<div id="prologue" hidden></div>
+
+<!-- L'ordine conta: sono script classici che condividono le stesse variabili. -->
+<script src="config.js"></script>      <!-- valori da cambiare in ogni copia -->
+<script src="contenuti.js"></script>   <!-- la storia: misure, capitoli, quiz, eventi -->
+<script src="motore.js"></script>      <!-- regole del gioco, punteggio, codice del punteggio -->
+<script src="i18n.js"></script>        <!-- traduzione in arabo -->
+<script src="comune.js"></script>      <!-- stato e funzioni condivise dell'interfaccia -->
+<script src="mappa.js"></script>       <!-- mappa animata su canvas -->
+<script src="prologo.js"></script>     <!-- schede del prologo -->
+<script src="interfaccia.js"></script> <!-- pannelli, azioni, classifica, avvio -->
+</body>
+</html>
